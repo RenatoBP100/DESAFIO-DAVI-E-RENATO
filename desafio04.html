@@ -23,11 +23,84 @@
     */
 
     //ENTRADA
-
+    let vendedores = ["Carlos", "Ana", "Pedro"];
+    let vendas = [[], [], []];
+    let valorTotal1 = 0
+    let valorTotal2 = 0
+    let valorTotal3 = 0
 
     //PROCESSAMENTO
+    for (let i = 0; i < 5; i++) {
+        let vender = Number(prompt("Me informe quanto você vendeu hoje, " + vendedores[0] + ":"));
+        let vender2 = Number(prompt("Me informe o quanto você vendeu hoje, " + vendedores[1] + ":"));
+        let vender3 = Number(prompt("Me informe o quanto você vendeu hoje, " + vendedores[2] + ":"));
 
+        function validar(valor, vendedor) {
+            if (vendedor == 1) {
+                while (valor < 0 || Number.isNaN(valor) == true) {
+                    if (valor < 0) {
+                        valor = Number(prompt("Me informe um valor de venda positivo: "));
+                    }
+                    else {
+                        valor = Number(prompt("Me informe uma venda que seja um numero: "));
+                    }
+                }
+            }
+            else if (vendedor == 2) {
+                while (valor < 0 || Number.isNaN(valor) == true) {
+                    if (valor < 0) {
+                        valor = Number(prompt("Me informe um valor de venda positivo: "));
+                    }
+                    else {
+                        valor = Number(prompt("Me informe uma venda que seja um numero: "));
+                    }
+                }
+            }
+            else if (vendedor == 3) {
+                while (valor < 0 || Number.isNaN(valor) == true) {
+                    if (valor < 0) {
+                        valor = Number(prompt("Me informe um valor de venda positivo: "));
+                    }
+                    else {
+                        valor = Number(prompt("Me informe uma venda que seja um numero: "));
+                    }
+                }
+            }
+        }
+        validar(vender, 1);
+        validar(vender2, 2);
+        validar(vender3, 3);
+        function registrar(valor, vendedor) {
+            if (vendedor == 1) {
+                vendas[0].push(valor)
+            }
+            else if (vendedor == 2) {
+                vendas[1].push(valor)
+            }
+            else if (vendedor == 3) {
+                vendas[2].push(valor)
+            }
+        }
+        registrar(vender, 1);
+        registrar(vender2, 2);
+        registrar(vender3, 3);
+        function soma(valor, vendedor) {
+            if (vendedor == 1) {
+                valor += valor
+            }
+            else if (vendedor == 2) {
+                valor += valor
+            }
+            else if (vendedor == 3) {
+                valor += valor
+            }
+            return valor
+        }
+        valorTotal1 = soma(vender, 1);
+        valorTotal2 = soma(vender2, 2);
+        valorTotal3 = soma(vender3, 3);
 
+    }
     //SAIDA
 
 </script>
