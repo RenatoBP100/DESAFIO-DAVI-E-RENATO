@@ -25,9 +25,9 @@
     //ENTRADA
     let vendedores = ["Carlos", "Ana", "Pedro"];
     let vendas = [[], [], []];
-    let valorTotal1 = 0
-    let valorTotal2 = 0
-    let valorTotal3 = 0
+    let valorTotal1 = 0;
+    let valorTotal2 = 0;
+    let valorTotal3 = 0;
 
     //PROCESSAMENTO
     for (let i = 0; i < 5; i++) {
@@ -72,13 +72,13 @@
         validar(vender3, 3);
         function registrar(valor, vendedor) {
             if (vendedor == 1) {
-                vendas[0].push(valor)
+                vendas[0].push(valor);
             }
             else if (vendedor == 2) {
-                vendas[1].push(valor)
+                vendas[1].push(valor);
             }
             else if (vendedor == 3) {
-                vendas[2].push(valor)
+                vendas[2].push(valor);
             }
         }
         registrar(vender, 1);
@@ -86,15 +86,15 @@
         registrar(vender3, 3);
         function soma(valor, vendedor) {
             if (vendedor == 1) {
-                valor += valor
+                valor += valor;
             }
             else if (vendedor == 2) {
-                valor += valor
+                valor += valor;
             }
             else if (vendedor == 3) {
-                valor += valor
+                valor += valor;
             }
-            return valor
+            return valor;
         }
         valorTotal1 = soma(vender, 1);
         valorTotal2 = soma(vender2, 2);
